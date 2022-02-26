@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+              }
+
+            @keyframes gradient {
+                  0% {
+                         background-position: 0% 50%;
+                     }
+                  50% {
+                         background-position: 100% 50%;
+                      }
+                100% {
+                         background-position: 0% 50%;
+                      }
+                   }
+        h1{
+            color: black;
+        }
+        .msg
+        {
+            text-align: center;
+            padding-top: 100px;  
+        }
+        input{
+           border-color: brown;
+           font-size: x-large;
+        }
+        button{
+            font-size: xx-large;
+            color: chocolate;
+            background-color: bisque;
+            border-radius: 30%;
+        }
+        select{
+            background-color: bisque;
+            font-size: xx-large;
+            border-radius: 30%;
+        }
+        span{
+            font-size: xx-large;
+            color:red;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="msg">
+     <h1>Simple Calculator</h1>  
+     <br><br>
+     <span id="result"></span>
+     <br><br><br>
+    <input type="number" id="number1" placeholder="Enter First Number">
+    <br><br>
+    <input type="number" id="number2" placeholder="Enter Second Number">
+    <br><br>
+    <select id="choice">
+        <option value="+">Addition</option>
+        <option value="-">Substraction</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+    </select>
+    <br><br>
+   <button onclick="fun()">Submit</button>
+     </div>
+ <script>
+     function fun()
+     {
+         var x=parseInt (document.getElementById("number1").value);
+         var y= parseInt( document.getElementById("number2").value);
+         var z= document.getElementById("choice").value;
+
+         if(z=='+')
+         {
+             var a=x+y;
+             document.getElementById("result").innerHTML=a;
+         }
+         if(z=='-')
+         {
+             var a=x-y;
+             document.getElementById("result").innerHTML=a;
+         }
+         if(z=='*')
+         {
+             var a=x*y;
+             document.getElementById("result").innerHTML=a;
+         }
+         if(z=='/')
+         {
+             var a=x/y;
+             document.getElementById("result").innerHTML=a;
+         }
+     }
+ </script>
+</body>
+</html>
